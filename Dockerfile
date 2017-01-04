@@ -1,4 +1,4 @@
-FROM soluto/ubuntu-base:xenial
+FROM soluto/ubuntu-base:16.04
 
 MAINTAINER Or Yagel <or@soluto.com>
     
@@ -22,3 +22,6 @@ RUN buildDeps='software-properties-common'; \
     apt-get autoremove -y && apt-get clean
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
+
+ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/$ANDROID_BUILD_TOOLS_VERSION:$ANT_HOME/bin:$MAVEN_HOME/bin:$GRADLE_HOME/bin:
