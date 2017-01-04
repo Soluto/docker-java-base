@@ -2,7 +2,7 @@ FROM soluto/ubuntu-base:xenial
 
 MAINTAINER Or Yagel <or@soluto.com>
     
-    # required to use add-apt-repository
+    # required to use add-apt-repository 
 RUN buildDeps='software-properties-common'; \
     set -x && \
     apt-get update && apt-get install -y $buildDeps --no-install-recommends && \
